@@ -84,7 +84,8 @@ assets/*
 # 新增：sim_env下的可视化图片/资产（大体积，仅仿真用，代码分析无需）
 src/sim_env/meshes/
 src/sim_env/models/
-src/sim_env/maps/
+src/sim_env/maps/*.pgm
+src/sim_env/maps/*.png
 src/sim_env/urdf/pictures/
 src/sim_env/worlds/pictures/
 src/sim_env/urdf/nanocar/meshes/
