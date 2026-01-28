@@ -79,5 +79,32 @@ html/
 3rd/conanbuildinfo.txt
 
 # ===================== 图片资源 =====================
-# 忽略 assets 下的所有 GIF 文件
+# 忽略 assets 下的所有文件（原规则保留）
 assets/*
+# 新增：sim_env下的可视化图片/资产（大体积，仅仿真用，代码分析无需）
+src/sim_env/meshes/
+src/sim_env/models/
+src/sim_env/maps/
+src/sim_env/urdf/pictures/
+src/sim_env/worlds/pictures/
+src/sim_env/urdf/nanocar/meshes/
+src/sim_env/urdf/nanocar/textures/
+src/sim_env/urdf/turtlebot3_*/meshes/
+src/sim_env/urdf/turtlebot3_*/textures/
+
+# ===================== sim_env 专属忽略（大体积/非核心仿真文件） =====================
+# RViz 缓存/非核心可视化配置
+src/sim_env/rviz/cache.rviz
+# 若无需分析RViz配置，可取消下方注释：
+# src/sim_env/rviz/sim_env.rviz
+# src/sim_env/rviz/view_multi.rviz
+
+# 非核心仿真世界文件（仅保留empty.world，忽略场景化world）
+src/sim_env/worlds/museum.world
+src/sim_env/worlds/turtlebot3_*.world
+src/sim_env/worlds/warehouse*.world
+
+# sim_env 临时产物/日志
+src/sim_env/*.log
+src/sim_env/*.tmp
+src/sim_env/*.bak
